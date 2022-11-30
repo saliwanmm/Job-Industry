@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-4">
+  <div class="card w-50 mx-auto">
+    <div id="loginBlock" class="card-header">
+      <h4 class="card-title" style="margin-left: 40%">Login</h4>
+      <p class="pb24 tc color-gray" >For login, enter your email or username</p>
+    </div>
+    <div class="card-body">
+      <form class="form" role="form" action="{{ url_for('auth.login') }}" method="post">
+        {{ form.hidden_tag() }}
+          <div class="mb-3">
+              {{ form.user_identifier.label }}
+              {{ form.user_identifier(class='form-control') }}
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+        <div class="form-group">
+          {{form.password.label}}
+          {{form.password(class='form-control')}}
+        </div>
+          <div style="margin-left: 40%">
+              {{form.submit(class='btn btn-primary')}}
+          </div>
+          <br>
+        <span><a href="{{ url_for('auth.register') }}">Registration</a></span>
+        <span><a href="{{ url_for('auth.reset_password') }}" style="margin-left: 60%">Reset password</a></span>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{#<div class="pr border-box full-width p16 scrollbar content-0-2-541 content-d0-0-2-551" style="opacity: 1; transform: translateY(0px);">#}
+{#    <div class="header-0-2-540">#}
+{#        <div class="pa cup df aic jcc close-0-2-544"><svg viewBox="0 0 24 24" fill="currentColor" class="icon-0-2-33"><path d="M10.5858 11.9999L4.66667 6.08079C4.27615 5.69027 4.27615 5.0571 4.66667 4.66658C5.0572 4.27606 5.69036 4.27605 6.08088 4.66658L12 10.5857L17.9191 4.66658C18.3096 4.27606 18.9428 4.27606 19.3333 4.66658C19.7239 5.0571 19.7239 5.69027 19.3333 6.08079L13.4142 11.9999L19.3333 17.919C19.7239 18.3096 19.7239 18.9427 19.3333 19.3332C18.9428 19.7238 18.3096 19.7238 17.9191 19.3332L12 13.4141L6.08088 19.3332C5.69036 19.7238 5.0572 19.7238 4.66667 19.3332C4.27615 18.9427 4.27615 18.3096 4.66667 17.919L10.5858 11.9999Z"></path></svg></div>#}
+{#        <div class="pr scrollbar container-0-2-542 container-d1-0-2-552">#}
+{#            <div class="full-height df fdc jcc">#}
+{#                <form class="body2">#}
+{#                    <h2 class="pb24 tc">Вхід</h2>#}
+{#                    <p class="pb24 tc color-gray">Для входу введіть свій номер телефону</p>#}
+{#                    <div class="pb24"><div class="full-width"><div class="df aic pr full-width root-0-2-243 root-d4-0-2-553"><input name="phone" type="tel" autocomplete="off" placeholder="+380" class="bd0 full-width on" value=""><fieldset class="db pa m0 pt0 pr8 pb0 pl8 l0 r0 b0 br10"><legend class="db p0"><span></span></legend></fieldset><div class="pa df aic suffix-0-2-248"><div style="display: none;"><svg viewBox="0 0 24 24" fill="currentColor" class="cup icon-0-2-33"><path d="M10.5858 11.9999L4.66667 6.08079C4.27615 5.69027 4.27615 5.0571 4.66667 4.66658C5.0572 4.27606 5.69036 4.27605 6.08088 4.66658L12 10.5857L17.9191 4.66658C18.3096 4.27606 18.9428 4.27606 19.3333 4.66658C19.7239 5.0571 19.7239 5.69027 19.3333 6.08079L13.4142 11.9999L19.3333 17.919C19.7239 18.3096 19.7239 18.9427 19.3333 19.3332C18.9428 19.7238 18.3096 19.7238 17.9191 19.3332L12 13.4141L6.08088 19.3332C5.69036 19.7238 5.0572 19.7238 4.66667 19.3332C4.27615 18.9427 4.27615 18.3096 4.66667 17.919L10.5858 11.9999Z"></path></svg></div></div></div></div></div>#}
+{#                    <button type="submit" class="df jcc bd0 cup on aic uppercase medium mb24 root-0-2-256 root-d118-0-2-555 large-0-2-266 contained-0-2-264 disabled-0-2-260 full-width"><span>Далі</span></button>#}
+{#                    <p class="pb24 tc color-gray">або</p>#}
+{#                    <button type="button" class="df jcc bd0 cup on aic uppercase medium mb24 root-0-2-256 root-d119-0-2-556 large-0-2-266 stroke-0-2-262 full-width"><span>Увійти по email</span></button>#}
+{#                    <p class="tc"><a class="link">Зареєструватися</a></p>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+
+
+{% endblock %}

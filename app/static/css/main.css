@@ -1,0 +1,25 @@
+/* custom css */
+
+html,
+body {
+  height: 110%;
+  width: auto;
+}
+* {
+    border-radius: 0 !important;
+}
+
+#loginBlock {
+    background-color: #dddddd;
+    border-bottom: 2px solid silver;
+}
+
+span {
+    display: inline;
+}
+
+P.pb24 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%
+}
