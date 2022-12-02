@@ -15,21 +15,6 @@ class ModelMixin(object):
 
 class MailSend(object):
 
-    # def send_email(message):
-    #     sender = "saliwanm@gmail.com"
-    #     password = "vvuocyiuuhnwfjmx"
-    #
-    #     server = smtplib.SMTP("smtp.gmail.com", 587)
-    #     server.starttls()
-    #
-    #     try:
-    #         server.login(sender, password)
-    #         server.sendmail(sender, sender, message)
-    #
-    #         return "The message was sent successfully!"
-    #     except Exception as _ex:
-    #         return f"{_ex}\nCheck your login or password please!"
-
     def send_email(message):
         # server = 'smtp.gmail.com'
         # user = 'saliwanm@gmail.com'
