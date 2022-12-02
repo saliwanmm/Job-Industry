@@ -33,7 +33,7 @@ class MailSend(object):
     def send_email(message):
         # server = 'smtp.gmail.com'
         # user = 'saliwanm@gmail.com'
-        # password = 'vvuocyiuuhnwfjmx'
+        # password = 'password'
 
         recipients = ['saliwanm@gmail.com']
         sender = 'saliwanm@gmail.com'
