@@ -98,8 +98,18 @@ def reset_password():
 
 @auth_blueprint.route('/change-password', methods = ['GET', 'POST'])
 def change_password():
-    pass
+    user: User = User.query.get(current_user.id)
+    form = PasswordResetForm()
 
+    if form.validate_on_submit():
+        user.password = form.password.data
+        user.save()
+        login_user(user)
+        flash("Password changed", "success")
+        return redirect(url_for("main.index"))
+    elif form.is_submitted():
+        flash("Wrong user password.", "danger")
+    return render_template("auth/change_password.html", form=form)
 
 
 @auth_blueprint.route('/password-reset/<reset_password_uuid>', methods = ['GET', 'POST'])

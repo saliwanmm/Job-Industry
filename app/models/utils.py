@@ -31,9 +31,9 @@ class MailSend(object):
     #         return f"{_ex}\nCheck your login or password please!"
 
     def send_email(message):
-        server = 'smtp.gmail.com'
-        user = 'saliwanm@gmail.com'
-        password = 'vvuocyiuuhnwfjmx'
+        # server = 'smtp.gmail.com'
+        # user = 'saliwanm@gmail.com'
+        # password = 'vvuocyiuuhnwfjmx'
 
         recipients = ['saliwanm@gmail.com']
         sender = 'saliwanm@gmail.com'
