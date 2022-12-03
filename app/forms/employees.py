@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, EmailField
+from wtforms import StringField, SubmitField, EmailField, DateField
 
 
 class EmployeesForm(FlaskForm):
@@ -8,5 +8,5 @@ class EmployeesForm(FlaskForm):
     last_name = StringField('last_name')
     phone = StringField('phone')
     address = StringField('address')
-    birthday = StringField('birthday')
+    birthday = DateField('birthday')
     submit = SubmitField('Save')

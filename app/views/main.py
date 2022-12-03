@@ -15,8 +15,8 @@ def about():
     return render_template("about.html")
 
 
-@main_blueprint.route("/plants")
-def plants():
-    all_plants = Plants.query.all()
-    return render_template("plants/profile.html", all_plants=all_plants)
+# @main_blueprint.route("/plants")
+# def plants():
+#     all_plants = Plants.query.all()
+#     return render_template("plants/plants_list.html", all_plants=all_plants)
 
