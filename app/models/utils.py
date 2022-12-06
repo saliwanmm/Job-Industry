@@ -3,6 +3,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from platform import python_version
+from flask import request
 
 
 class ModelMixin(object):
@@ -12,6 +13,10 @@ class ModelMixin(object):
         db.session.commit()
         return self
 
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+        return self
 
 class MailSend(object):
 

@@ -13,6 +13,8 @@
           <th scope="col">Email</th>
           <th scope="col">Address</th>
           <th scope="col">Birthday</th>
+          <th scope="col">Change</th>
+          <th scope="col">Release</th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +26,8 @@
           <td>{{recipient.email}}</td>
           <td>{{recipient.address}}</td>
           <td>{{recipient.birthday.strftime('%Y-%b')}}</td>
+          <td><a href="/change-employee/{{ recipient.id }}" class="card-link">Edit</a></td>
+          <td><a href="/delete-recipient/{{ recipient.id }}" class="card-link">Delete</a></td>
         </tr>
         {% endfor %}
       </tbody>
